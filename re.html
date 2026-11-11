@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse | Resident Evil</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+    <div class="area-cabeçalho">
+        <h1 class="titulo"><b>GAME<span class="vermelho">VERSE</span></b></h1>
+        <a href="cards.html" class="cabeçalho-botton">Home</a>
+        <a href="Jogos.html" class="cabeçalho-botton">Jogos</a>
+        <a href="#" class="cabeçalho-botton">GameBlog</a>
+    </div>
+
+    <!--AREA PRINCIPAL-->
+    <div class="caixa">
+        <div class="caixa-info">
+            <div class="caixa-info-img">
+                <img src="imagens/Resident_Evil_capa.png">
+            </div>
+
+                 <button class="btn-favoritar" id="btn-resident" onclick="toggleFavorito(event, 'resident')">
+                    Favoritar
+                </button>
+            <div class="caixa-informacoes">
+                <div class="informacoes"><b>Desenvolvedor:</b>Capcon</div>
+                <div class="informacoes"><b>Lançamento:</b> 22 de março de 1996</div>
+                <div class="informacoes"><b>Classificação:</b> 16 anos</div>
+                <div class="informacoes"><b>Plataformas:</b> PS, SEGA Saturn, PC</div>
+            </div>
+        </div>
+
+        <div class="sinopse">
+            <div class="sinopse-area">
+                Resident Evil é o título pioneiro do gênero survival horror,
+                 estruturado em exploração de cenários pré-renderizados com
+                  ângulos de câmera fixos e movimentação relativa ao personagem
+                   (tank controls). O loop de gameplay foca na navegação por um
+                    mapa altamente interconectado (a Mansão Spencer), resolução
+                     de quebra-cabeças e gerenciamento estrito de um inventário
+                      com vagas limitadas. A economia de recursos é rígida: munições
+                      e itens de cura são escassos, e o sistema de salvamento exige 
+                      o consumo de itens específicos (Ink Ribbons) em pontos fixos do mapa.
+                       O jogador escolhe entre dois protagonistas (Jill Valentine e Chris Redfield),
+                        escolha que altera diretamente a dificuldade da campanha ao modificar a
+                         capacidade de inventário, a resistência do personagem e o arsenal acessível.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- EASTER EGG CMD E GAME -->
+    <div id="cmd-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">C:\</span>
+                <span class="cmd-titulo">Prompt de Comando</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharCMD()">X</button>
+        </div>
+        <div class="cmd-body" id="cmd-body-area">
+            <p class="cmd-mensagem">GameVerse [versão 4.0.4]</p>
+            <p class="cmd-mensagem">(c) 2026 GameVerse Corporation. Todos os direitos reservados.</p>
+            <br>
+            <div id="cmd-historico"></div>
+            <div class="cmd-linha-input">
+                <span class="cmd-prompt">C:\UserCurioso&gt;</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">🕹️</span>
+                <span class="cmd-titulo">Invaders</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharJogo()">X</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

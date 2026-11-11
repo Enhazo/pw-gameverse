@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse | Forza Horizon</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+    <div class="area-cabeçalho">
+        <h1 class="titulo"><b>GAME<span class="vermelho">VERSE</span></b></h1>
+        <a href="cards.html" class="cabeçalho-botton">Home</a>
+        <a href="Jogos.html" class="cabeçalho-botton">Jogos</a>
+        <a href="#" class="cabeçalho-botton">GameBlog</a>
+    </div>
+
+    <!--AREA PRINCIPAL-->
+    <div class="caixa">
+        <div class="caixa-info">
+            <div class="caixa-info-img">
+                <img src="imagens/Forza_Horizon.jpg">
+            </div>
+
+                <button class="btn-favoritar" id="btn-forza" onclick="toggleFavorito(event, 'forza')">
+                    Favoritar
+                </button>
+
+            <div class="caixa-informacoes">
+                <div class="informacoes"><b>Desenvolvedor:</b> Playground Games</div>
+                <div class="informacoes"><b>Lançamento:</b> 23 de outubro de 2012</div>
+                <div class="informacoes"><b>Classificação:</b> Livre para todas as idades</div>
+                <div class="informacoes"><b>Plataformas:</b> Xbox 360</div>
+            </div>
+        </div>
+
+        <div class="sinopse">
+            <div class="sinopse-area">
+               Forza Horizon é um jogo de corrida em mundo aberto que mescla a física de simulação 
+               automobilística com a acessibilidade arcade. O motor físico do jogo calcula aderência
+                e transferência de peso, mas foi projetado para perdoar erros e acomodar a condução 
+                em alta velocidade e transições constantes entre asfalto e terra. A progressão é linearmente
+                 estruturada por um sistema de "pulseiras" de níveis, que são desbloqueadas ao vencer eventos
+                  de circuito, corridas de ponto a ponto, disputas contra veículos não convencionais
+                   (como aviões ou balões) e desafios de radar. Durante a exploração livre (freeroam)
+                   , o loop de jogabilidade é alimentado por um sistema dinâmico de combos de Habilidade
+                    (Skill Chain), que concede pontos de experiência ao encadear manobras como drifts,
+                     quase colisões e saltos em alta velocidade. O ambiente opera em um ciclo contínuo 
+                     de dia e noite e oferece dezenas de carros licenciados com suporte a atualizações de
+                      performance modulares e customização visual.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- EASTER EGG CMD E GAME -->
+    <div id="cmd-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">C:\</span>
+                <span class="cmd-titulo">Prompt de Comando</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharCMD()">X</button>
+        </div>
+        <div class="cmd-body" id="cmd-body-area">
+            <p class="cmd-mensagem">GameVerse [versão 4.0.4]</p>
+            <p class="cmd-mensagem">(c) 2026 GameVerse Corporation. Todos os direitos reservados.</p>
+            <br>
+            <div id="cmd-historico"></div>
+            <div class="cmd-linha-input">
+                <span class="cmd-prompt">C:\UserCurioso&gt;</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">🕹️</span>
+                <span class="cmd-titulo">Invaders</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharJogo()">X</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse | Cyberpunk 2077</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+    <div class="area-cabeçalho">
+        <h1 class="titulo"><b>GAME<span class="vermelho">VERSE</span></b></h1>
+        <a href="cards.html" class="cabeçalho-botton">Home</a>
+        <a href="Jogos.html" class="cabeçalho-botton">Jogos</a>
+        <a href="#" class="cabeçalho-botton">GameBlog</a>
+    </div>
+
+    <!--AREA PRINCIPAL-->
+    <div class="caixa">
+        <div class="caixa-info">
+            <div class="caixa-info-img">
+                <img src="imagens/Cyberpunk_2077_capa.png">
+            </div>
+
+            <button class="btn-favoritar" id="btn-cyberpunk" onclick="toggleFavorito(event, 'cyberpunk')">
+                Favoritar
+            </button>
+
+            <div class="caixa-informacoes">
+                <div class="informacoes"><b>Desenvolvedor:</b> Bethesda Game Studios</div>
+                <div class="informacoes"><b>Lançamento:</b> 14 de novembro de 2018</div>
+                <div class="informacoes"><b>Classificação:</b> 18 anos</div>
+                <div class="informacoes"><b>Plataformas:</b> PC, PlayStation 4, Xbox One</div>
+            </div>
+        </div>
+
+        <div class="sinopse">
+            <div class="sinopse-area">
+          Cyberpunk 2077 é um RPG de ação em mundo aberto jogado em primeira pessoa, estruturado em uma
+           metrópole densa e vertical de ficção científica. O núcleo mecânico combina combate com armas
+            de fogo, furtividade, combate corpo a corpo e um sistema de "quickhacking", que permite ao
+             jogador manipular o ambiente e aplicar debuffs ou dano em inimigos através de invasões de
+              rede em tempo real. A progressão é baseada em três pilares: experiência tradicional
+               (para atributos de base e árvores de vantagens), "Street Cred" (sistema de reputação
+                que desbloqueia novos contratos e comerciantes) e instalação de cyberwares — implantes
+                 cibernéticos modulares que alteram o gameplay, concedendo habilidades como saltos duplos,
+                 braços-lâmina ou armadura subdérmica. As missões oferecem múltiplas rotas e métodos de
+                  resolução baseados na build do personagem, enquanto a atualização de sistemas recentes
+                   (versão 2.0) introduziu combate veicular ativo e uma inteligência artificial dinâmica
+                    para perseguições policiais escalonadas.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- EASTER EGG CMD E GAME -->
+    <div id="cmd-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">C:\</span>
+                <span class="cmd-titulo">Prompt de Comando</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharCMD()">X</button>
+        </div>
+        <div class="cmd-body" id="cmd-body-area">
+            <p class="cmd-mensagem">GameVerse [versão 4.0.4]</p>
+            <p class="cmd-mensagem">(c) 2026 GameVerse Corporation. Todos os direitos reservados.</p>
+            <br>
+            <div id="cmd-historico"></div>
+            <div class="cmd-linha-input">
+                <span class="cmd-prompt">C:\UserCurioso&gt;</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">🕹️</span>
+                <span class="cmd-titulo">Invaders</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharJogo()">X</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

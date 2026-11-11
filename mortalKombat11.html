@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse | Mortal Kombat 11</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+    <div class="area-cabeçalho">
+        <h1 class="titulo"><b>GAME<span class="vermelho">VERSE</span></b></h1>
+        <a href="cards.html" class="cabeçalho-botton">Home</a>
+        <a href="Jogos.html" class="cabeçalho-botton">Jogos</a>
+        <a href="#" class="cabeçalho-botton">GameBlog</a>
+    </div>
+
+    <!--AREA PRINCIPAL-->
+    <div class="caixa">
+        <div class="caixa-info">
+            <div class="caixa-info-img">
+                <img src="imagens/Mortal_Kombat_11.jpg">
+            </div>
+
+                <button class="btn-favoritar" id="btn-mk11" onclick="toggleFavorito(event, 'mk11')">
+                    Favoritar
+                </button>
+
+            <div class="caixa-informacoes">
+                <div class="informacoes"><b>Desenvolvedor:</b> NetherRealm Studios</div>
+                <div class="informacoes"><b>Lançamento:</b> 23 de abril de 2019</div>
+                <div class="informacoes"><b>Classificação:</b> 18 anos</div>
+                <div class="informacoes"><b>Plataformas:</b> PC, PS4, PS5, Xbox One</div>
+            </div>
+        </div>
+
+        <div class="sinopse">
+            <div class="sinopse-area">
+                Mortal Kombat 11 é um jogo de luta 2.5D focado em combate tático e controle de espaço.
+                 A principal inovação desta edição é o sistema de Variações Customizáveis,
+                que permite aos jogadores alterar a lista de golpes especiais, atributos e 
+                equipamentos cosméticos de cada lutador. A economia de combate foi reestruturada, 
+                substituindo a barra de especial única por medidores independentes de ataque e 
+                defesa. O jogo também introduz novas mecânicas de risco e recompensa, como os 
+                "Fatal Blows" (habilidades de alto dano ativadas apenas quando a saúde do personagem está crítica)
+                e os "Krushing Blows". Além do modo História, a progressão se dá pelas Torres do Tempo (desafios rotativos em formato live service)
+                e o multiplayer online opera com arquitetura de rollback netcode para maior estabilidade nas partidas.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- EASTER EGG CMD E GAME -->
+    <div id="cmd-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">C:\</span>
+                <span class="cmd-titulo">Prompt de Comando</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharCMD()">X</button>
+        </div>
+        <div class="cmd-body" id="cmd-body-area">
+            <p class="cmd-mensagem">GameVerse [versão 4.0.4]</p>
+            <p class="cmd-mensagem">(c) 2026 GameVerse Corporation. Todos os direitos reservados.</p>
+            <br>
+            <div id="cmd-historico"></div>
+            <div class="cmd-linha-input">
+                <span class="cmd-prompt">C:\UserCurioso&gt;</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">🕹️</span>
+                <span class="cmd-titulo">Invaders</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharJogo()">X</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

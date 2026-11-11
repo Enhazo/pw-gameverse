@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse | Fallout 76</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+    <div class="area-cabeçalho">
+        <h1 class="titulo"><b>GAME<span class="vermelho">VERSE</span></b></h1>
+        <a href="cards.html" class="cabeçalho-botton">Home</a>
+        <a href="Jogos.html" class="cabeçalho-botton">Jogos</a>
+        <a href="#" class="cabeçalho-botton">GameBlog</a>
+    </div>
+
+    <!--AREA PRINCIPAL-->
+    <div class="caixa">
+        <div class="caixa-info">
+            <div class="caixa-info-img">
+                <img src="imagens/Terraria.png">
+            </div>
+
+                <button class="btn-favoritar" id="btn-terraria" onclick="toggleFavorito(event, 'terraria')">
+                    Favoritar
+                </button>
+
+            <div class="caixa-informacoes">
+                <div class="informacoes"><b>Desenvolvedor:</b> Re-Logic</div>
+                <div class="informacoes"><b>Lançamento:</b> 16 de maio de 2011</div>
+                <div class="informacoes"><b>Classificação:</b> 12 anos</div>
+                <div class="informacoes"><b>Plataformas:</b> PC, PlayStation, Xbox</div>
+            </div>
+        </div>
+
+        <div class="sinopse">
+            <div class="sinopse-area">
+                Terraria é um jogo de ação e aventura em sandbox 2D focado em exploração, 
+                coleta de recursos, construção e combate progressivo. Os mundos são gerados 
+                proceduralmente com biomas e cavernas subterrâneas. O loop de gameplay é guiado pela
+                 evolução de equipamentos e conquistas de chefes: os jogadores mineram materiais, fabricam armas,
+                  ferramentas e armaduras, e constroem abrigos para atrair NPCs utilitários (como comerciantes e enfermeiras).
+                   A progressão global do jogo é dividida em fases (como Pré-Hardmode e Hardmode), desbloqueadas ao derrotar
+                    chefes específicos, o que altera a dificuldade do mundo, adiciona novos minérios e liberta eventos climáticos
+                     e invasões. O sistema de combate não possui classes fixas, permitindo especializações através do gerenciamento
+                      de acessórios e armas voltadas para ataque corpo a corpo,
+                 à distância, magia ou invocação. Suporta modo solo e multijogador cooperativo.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- EASTER EGG CMD E GAME -->
+    <div id="cmd-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">C:\</span>
+                <span class="cmd-titulo">Prompt de Comando</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharCMD()">X</button>
+        </div>
+        <div class="cmd-body" id="cmd-body-area">
+            <p class="cmd-mensagem">GameVerse [versão 4.0.4]</p>
+            <p class="cmd-mensagem">(c) 2026 GameVerse Corporation. Todos os direitos reservados.</p>
+            <br>
+            <div id="cmd-historico"></div>
+            <div class="cmd-linha-input">
+                <span class="cmd-prompt">C:\UserCurioso&gt;</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">🕹️</span>
+                <span class="cmd-titulo">Invaders</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharJogo()">X</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

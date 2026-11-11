@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse | Jogos</title>
+
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+    <div class="area-cabeçalho">
+        <h1 class="titulo"><b>GAME<span class="vermelho">VERSE</span></b></h1>
+
+        <a href="cards.html" class="cabeçalho-botton">Home</a>
+        <a href="Jogos.html" class="cabeçalho-botton">Jogos</a>
+        <a href="#" class="cabeçalho-botton">GameBlog</a>
+    </div>
+
+    <a href="favoritos.html">
+        <div class="menu-favoritos"><b>FAVORITOS</b></div>
+    </a>
+
+    <!-- ÁREA DE JOGOS -->
+    <div class="caixa">
+
+        <!--Fallout76-->
+        <a href="fallout76.html" onclick="registrarAcesso('fallout76')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/Fallout76.jpg" width="249" alt="Fallout 76"></div>
+                <div class="caixa-jogos-categoria">Sobrevivência</div>
+                <p class="caixa-jogos-titulo"><b>Fallout 76</b></p>
+            </div>
+        </a>
+
+        <!--MortalKombat-->
+        <a href="mortalKombat11.html" onclick="registrarAcesso('mk11')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/Mortal_Kombat_11.jpg" width="249" alt="Mortal Kombat 11"></div>
+                <div class="caixa-jogos-categoria">Luta</div>
+                <p class="caixa-jogos-titulo"><b>Mortal Kombat 11</b></p>
+            </div>
+        </a>
+
+        <!--GTA6-->
+        <a href="gta6.html" onclick="registrarAcesso('gta6')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/GTA_VI_250x250.jpg" width="290" alt="GTA 6"></div>
+                <div class="caixa-jogos-categoria">Ação</div>
+                <p class="caixa-jogos-titulo"><b>GTA 6</b></p>
+            </div>
+        </a>
+
+        <!--Terraria-->
+        <a href="terraria.html" onclick="registrarAcesso('terraria')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/Terraria.png" alt="Terraria"></div>
+                <div class="caixa-jogos-categoria">Sobrevivência</div>
+                <p class="caixa-jogos-titulo"><b>Terraria</b></p>
+            </div>
+        </a>
+
+        <!--RedDeadRedemption-->
+        <a href="rdr.html" onclick="registrarAcesso('rdr')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/Red_Dead_Redemption_capa.png" alt="Red Dead Redemption"></div>
+                <div class="caixa-jogos-categoria">Faroeste</div>
+                <p class="caixa-jogos-titulo"><b>Red Dead Redemption</b></p>
+            </div>
+        </a>
+
+        <!--Cyberpunk2077-->
+        <a href="cp2077.html" onclick="registrarAcesso('cyberpunk')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/Cyberpunk_2077_capa.png" alt="Cyberpunk 2077"></div>
+                <div class="caixa-jogos-categoria">RPG</div>
+                <p class="caixa-jogos-titulo"><b>Cyberpunk 2077</b></p>
+            </div>
+        </a>
+
+        <!--ForzaHorizon-->
+        <a href="forza.html" onclick="registrarAcesso('forza')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/Forza_Horizon.jpg" alt="Forza Horizon"></div>
+                <div class="caixa-jogos-categoria">Corrida</div>
+                <p class="caixa-jogos-titulo"><b>Forza Horizon</b></p>
+            </div>
+        </a>
+
+        <!--ResidentEvil-->
+        <a href="re.html" onclick="registrarAcesso('resident')">
+            <div class="caixa-jogos">
+                <div class="caixa-jogos-img"><img src="imagens/Resident_Evil_capa.png" alt="Resident Evil"></div>
+                <div class="caixa-jogos-categoria">Terror</div>
+                <p class="caixa-jogos-titulo"><b>ResidentEvil</b></p>
+            </div>
+        </a>
+
+    </div>
+
+
+    <!-- CONTAINER DO TERMINAL CMD -->
+    <div id="cmd-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">C:\</span>
+                <span class="cmd-titulo">Prompt de Comando</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharCMD()">X</button>
+        </div>
+        <div class="cmd-body" id="cmd-body-area">
+            <p class="cmd-mensagem">GameVerse [versão 4.0.4]</p>
+            <p class="cmd-mensagem">(c) 2026 GameVerse Corporation. Todos os direitos reservados.</p>
+            <br>
+            <div id="cmd-historico"></div>
+            <div class="cmd-linha-input">
+                <span class="cmd-prompt">C:\UserCurioso&gt;</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTAINER DO MINIGAME -->
+    <div id="game-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">🕹️</span>
+                <span class="cmd-titulo">Invaders</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharJogo()">X</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

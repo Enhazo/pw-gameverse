@@ -1,0 +1,623 @@
+*{
+
+    margin: 0px;
+
+    padding: 0px;
+
+    border: none;
+
+}
+
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    height: 100vh;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+
+    background-image: url(imagens/Fundo.jpeg);
+    background-size: 67px;
+    background-repeat: repeat ;
+
+}
+
+/*================cabeçalho====================*/
+
+.area-cabeçalho{
+
+    padding: 15px;
+
+    display: flex;
+
+    gap: 20px;
+
+    background-color: #000000dc;
+
+    justify-content: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 2px solid rgba(51, 51, 51, 0.849);
+    height: 20px;
+    margin-bottom: 20px;
+
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.cabeçalho-botton{
+
+    font-weight: bold;
+
+    color: #2e2e2e;
+
+    width: 88px;
+
+    height: 25px;
+
+    background-color: #111111;
+
+    text-decoration: none;
+
+    line-height: 25px; /* centraliza o texto verticalmente | Tem que ser do tamanho vertical do elemento */
+
+
+
+    border-radius: 5px;
+
+    border-width: 2px;
+
+    border-style: solid;
+
+    border-color: #111111;
+
+
+
+    box-shadow:  none;
+
+    text-shadow: none;
+
+
+
+    transition: box-shadow    0.4s  ease,
+
+                border-color  0.5s  ease;
+
+}
+
+
+
+.cabeçalho-botton:hover{
+
+    border-color: rgb(255, 0, 0);
+
+    box-shadow:
+
+    0 0 12px 1px rgb(255, 0, 0),
+
+    inset 0 0 12px 1px rgb(255, 0, 0);
+
+
+
+    color: transparent;
+
+    text-shadow: 0px 0px 1px rgb(255, 0, 0);
+
+}
+
+
+
+.cabeçalho-botton.selecionado{
+
+    background-color: rgb(255, 0, 0);
+
+    border-color: rgb(255, 0, 0);
+
+    box-shadow:
+    0 0 12px 1px rgb(255, 0, 0);
+
+    color: white;
+
+}
+
+.titulo{
+    color: white;
+
+    position: absolute;
+
+    left: 20px;
+}
+
+.vermelho{
+    color: red;
+    animation: neonPulse 3s infinite alternate;
+}
+
+
+
+/*==================BODY-Jogos=====================*/
+
+
+
+.caixa{
+    background-color: transparent;
+
+    display: flex; /*alinhar o elemento, deixar um ao lado do outro*/
+
+    flex-wrap: wrap; /*diz ao navegador q se não caber, passa para a linha de baixo*/
+
+    gap: 20px;
+
+    width: 1200px;
+
+    margin: 0 auto;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+
+.caixa-jogos{
+
+    background-color: #111111;
+
+    border-radius: 5px;
+
+    width:  273px;
+    height: 350px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #111111;
+
+    box-shadow: none; 
+
+    transition: translate ease 0.5s,
+
+                box-shadow ease 0.4s,
+
+                border-color ease 0.4s;
+
+}
+
+
+
+.caixa-jogos:hover{
+
+    translate: 0 -10px;
+
+    border-color: red;
+
+    box-shadow:
+    0 0 12px 1px rgb(255, 0, 0),
+    inset 0 0 12px 1px red;
+
+}
+
+
+
+.caixa-jogos-img{
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 5px;
+
+    margin: 11.5px auto;
+
+    overflow: hidden;
+
+}
+
+img{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caixa-jogos-titulo{
+
+    margin-left: 14px;
+    text-align:  left;
+
+    float: left;
+    right: 185px;
+    width: 50%;
+
+    font-size: 20px;
+}
+
+.caixa-jogos-categoria{
+    background-color: #ff02026e;
+
+    padding: 2px;
+
+    margin-right: 14px;
+
+    float: right;
+
+    width: auto; 
+
+    border: 1px solid rgb(255, 0, 0);
+
+    border-radius: 5px;
+}
+
+.menu-favoritos{
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    background-color: #111111;
+    color: white;
+    border-radius: 5px;
+    line-height: 50px;
+    overflow: hidden;
+
+
+    position: absolute;
+    left: 20px;
+
+    transition: ease 0.4s,
+                width ease 0.5s;
+}
+.menu-favoritos::before{
+    content: "❤️ ";
+}
+
+.menu-favoritos:hover {
+    box-shadow: 0 0 12px 1px rgb(255, 0, 0);
+    background-color: #ff0000;
+    width: 140px;
+}
+
+/*=================ABA-DOS-JOGOS=====================*/
+
+.caixa-info{
+    width: 350px;
+    height: 562px;
+    background-color: #111111;
+    margin-right: auto;
+    
+    border-radius: 5px;
+    overflow: hidden;
+}
+.caixa-info-img{
+    width: 327px;
+    height: 327px;
+    border-radius: 15px;
+    margin: 11.5px auto;
+    overflow: hidden;
+
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
+}
+
+.caixa-informacoes {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 327px;
+    height: 155px;
+    background-color: #1a1a1a;
+    padding-top: 2px;
+
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 11.5px auto;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.informacoes{
+    background-color: #111111;
+    width: 310px;
+    height: 30px;
+    margin: 4px auto;
+    padding-left:5px;
+
+    line-height: 30px;
+    text-align: left;
+
+    border-radius: 5px;
+    border-left: 4px solid red ;
+}
+
+.sinopse{
+    display: flex;
+    width: 530px;
+    background-color: #111111;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 300px;
+}
+.sinopse-area{
+    width: 480px;
+    height: 510px;
+    padding: 10px;
+   
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    text-align: left;
+    margin: auto;
+}
+
+/*====================BODY-HOME===================*/
+
+.caixa-HOME{
+    text-align: center;
+}
+
+
+
+/* ================= TERMINAL CMD & Space Invaders ================= */
+
+
+
+.cmd-escondido {
+
+    display: none !important;
+
+}
+
+
+
+#cmd-container, #game-container {
+
+    display: flex;
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 640px;
+
+    max-width: 95%;
+
+    height: 480px;
+
+    background-color: #000000;
+
+    border: 1px solid #1a1a1a;
+
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+
+    z-index: 9999;
+
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    border-radius: 0px; 
+
+}
+
+
+
+/* Barra Superior da Janela (Estilo Windows)*/
+
+.cmd-header {
+
+    background-color: #e0e0e0;
+
+    padding: 2px 5px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #000000;
+
+    font-weight: normal;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-size: 12px;
+
+}
+
+
+
+.cmd-icon-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+
+.cmd-icon {
+
+    font-weight: bold;
+
+}
+
+
+
+#cmd-fechar {
+
+    background: transparent;
+
+    color: #000000;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    border: 1px solid transparent;
+
+    cursor: pointer;
+
+    padding: 0 4px;
+
+}
+
+
+
+#cmd-fechar:hover {
+
+    background-color: #e81123;
+
+    color: white;
+
+}
+
+
+
+/* Corpo do Terminal */
+
+.cmd-body {
+
+    padding: 10px;
+
+    color: #3b824e; /* Tom sólido e suave */
+
+    flex-grow: 1;
+
+    overflow-y: auto;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+
+}
+
+
+
+.cmd-linha-input {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.cmd-prompt {
+
+    color: #3b824e;
+
+    margin-right: 5px;
+
+    white-space: pre;
+
+}
+
+
+
+#cmd-input {
+
+    background: transparent !important;
+
+    border: none !important;
+
+    outline: none !important;
+
+    color: #3b824e !important;
+
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+
+    font-size: 14px;
+
+    flex-grow: 1;
+
+    caret-color: #3b824e;
+
+}
+
+
+
+/* Canvas do Jogo */
+
+#gameCanvas {
+
+    background-color: #000000;
+
+    display: block;
+
+}
+
+
+
+/*KEYFRAMES==============================================*/
+
+@keyframes neonPulse{
+
+    from {text-shadow:  0 0 7px rgb(255, 0, 0);}
+
+    to   {text-shadow:  0 0 20px rgb(255, 0, 0);}
+
+}
+
+
+
+
+
+
+
+
+/*BOTAO FAVORITAR*/
+.btn-favoritar {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease 0.3s;
+    width: 93%;
+    margin: 10px auto 0 auto;
+    display: block;
+    clear: both;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
+}
+
+.btn-favoritar:hover {
+    background-color: #ff0000;
+    box-shadow:0 0 12px 1px #ff0000;
+}
+
+.btn-favoritar.ativo {
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 12px 1px rgb(255, 0, 0);
+    color: white;
+}

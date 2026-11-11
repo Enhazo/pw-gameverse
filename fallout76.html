@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse | Fallout 76</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+    <div class="area-cabeçalho">
+        <h1 class="titulo"><b>GAME<span class="vermelho">VERSE</span></b></h1>
+        <a href="cards.html" class="cabeçalho-botton">Home</a>
+        <a href="Jogos.html" class="cabeçalho-botton">Jogos</a>
+        <a href="#" class="cabeçalho-botton">GameBlog</a>
+    </div>
+
+    <!--AREA PRINCIPAL-->
+    <div class="caixa">
+        <div class="caixa-info">
+            <div class="caixa-info-img">
+                <img src="imagens/Fallout76.jpg">
+            </div>
+
+            <button class="btn-favoritar" id="btn-fallout76" onclick="toggleFavorito(event, 'fallout76')">
+                Favoritar
+            </button>
+
+            <div class="caixa-informacoes">
+                <div class="informacoes"><b>Desenvolvedor:</b> Bethesda Game Studios</div>
+                <div class="informacoes"><b>Lançamento:</b> 14 de novembro de 2018</div>
+                <div class="informacoes"><b>Classificação:</b> 18 anos</div>
+                <div class="informacoes"><b>Plataformas:</b> PC, PlayStation 4, Xbox One</div>
+            </div>
+        </div>
+
+        <div class="sinopse">
+            <div class="sinopse-area">
+                O Dia da Retomada chegou. Vinte e cinco anos após as bombas nucleares choverem sobre o mundo,
+                 você e os mais brilhantes habitantes do país emergem das profundezas do Refúgio 76 rumo aos Apalaches selvagens
+                  e radioativos. Pela primeira vez na aclamada franquia, a vastidão pós-apocalíptica não precisa ser encarada
+                   de forma solitária. Explore um mundo aberto gigantesco e dinâmico, construa abrigos do zero em qualquer
+                    lugar do mapa, e decida se irá se aliar a outros sobreviventes ou enfrentá-los em uma disputa por 
+                    recursos vitais. Em uma terra infestada de bestas mutantes e assolada por ameaças nucleares ativas,
+                 o destino da Virgínia Ocidental está nas suas mãos. Você está pronto para reconstruir a América?
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- EASTER EGG CMD E GAME -->
+    <div id="cmd-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">C:\</span>
+                <span class="cmd-titulo">Prompt de Comando</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharCMD()">X</button>
+        </div>
+        <div class="cmd-body" id="cmd-body-area">
+            <p class="cmd-mensagem">GameVerse [versão 4.0.4]</p>
+            <p class="cmd-mensagem">(c) 2026 GameVerse Corporation. Todos os direitos reservados.</p>
+            <br>
+            <div id="cmd-historico"></div>
+            <div class="cmd-linha-input">
+                <span class="cmd-prompt">C:\UserCurioso&gt;</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="cmd-escondido">
+        <div class="cmd-header">
+            <div class="cmd-icon-title">
+                <span class="cmd-icon">🕹️</span>
+                <span class="cmd-titulo">Invaders</span>
+            </div>
+            <button id="cmd-fechar" onclick="fecharJogo()">X</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
